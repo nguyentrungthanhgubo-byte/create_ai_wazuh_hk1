@@ -1,0 +1,24 @@
+### THAY INDEXER_HOST bằng IP hoặc hostname của Indexer
+### Không đưa mật khẩu thật vào file này.
+@host = https://INDEXER_HOST:9200
+@auth = Basic YOUR_BASE64_ENCODED_CREDENTIALS
+
+### 1. Kiểm tra Connector thứ nhất
+GET {{host}}/_plugins/_ml/connectors/iO9QkaEBJ9pS0vnaLXSf
+Authorization: {{auth}}
+
+### 2. Kiểm tra Connector thứ hai
+GET {{host}}/_plugins/_ml/connectors/je9UkaEBJ9pS0vnahnRU
+Authorization: {{auth}}
+
+### 3. Kiểm tra Model GPT-4o-mini
+GET {{host}}/_plugins/_ml/models/kO9WkaEBJ9pS0vnaG3Sp
+Authorization: {{auth}}
+
+### 4. Kiểm tra cấu hình os_chat
+GET {{host}}/.plugins-ml-config/_doc/os_chat
+Authorization: {{auth}}
+
+### 5. Kiểm tra Agent đã đăng ký
+GET {{host}}/_plugins/_ml/agents/_search
+Authorization: {{auth}}

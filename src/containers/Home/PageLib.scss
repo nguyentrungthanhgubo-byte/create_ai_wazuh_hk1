@@ -1,0 +1,186 @@
+.gemini-sidebar {
+    width: 280px;
+    background-color: #131316;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid #1e1f24;
+    padding: 12px 10px;
+    height: 100vh;
+    flex-shrink: 0;
+    color: #e3e3e3;
+
+    .sidebar-top {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 8px 12px;
+            font-weight: 600;
+            font-size: 16px;
+
+            .sparkle-icon {
+                color: #4b90ff;
+            }
+        }
+
+        .new-chat-btn {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background-color: #1a1a1e;
+            color: #e3e3e3;
+            border: 1px solid #2a2b30;
+            padding: 10px 14px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background 0.2s;
+
+            &:hover {
+                background-color: #28292e;
+            }
+        }
+
+        .nav-menu {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+            margin-top: 4px;
+
+            .nav-item {
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                padding: 8px 12px;
+                border-radius: 8px;
+                color: #c4c7c5;
+                font-size: 14px;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: #1e1f24;
+                }
+            }
+        }
+    }
+
+    .sidebar-middle {
+        flex: 1;
+        overflow-y: auto;
+        margin-top: 12px;
+        padding-right: 2px;
+
+        &::-webkit-scrollbar {
+            width: 4px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: #2a2b30;
+            border-radius: 4px;
+        }
+
+        .section-title {
+            font-size: 12px;
+            color: #8e918f;
+            padding: 6px 12px;
+        }
+
+        .history-header {
+            display: flex;
+            justify-content: space-between;
+            padding: 4px 12px;
+            font-size: 12px;
+            color: #8e918f;
+        }
+
+        .history-list {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+            margin-top: 4px;
+
+            .history-item {
+                padding: 8px 12px;
+                font-size: 13px;
+                color: #c4c7c5;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                border-radius: 8px;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: #1e1f24;
+                }
+
+                &.active {
+                    background-color: #282a36;
+                    color: #fff;
+                }
+            }
+        }
+    }
+
+    .sidebar-bottom {
+        padding-top: 8px;
+        border-top: 1px solid #1e1f24;
+
+        .user-profile {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 8px 10px;
+            border-radius: 8px;
+            cursor: pointer;
+
+            &:hover {
+                background-color: #1e1f24;
+            }
+
+            .avatar {
+                width: 28px;
+                height: 28px;
+                border-radius: 50%;
+                background-color: #33353a;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .username {
+                font-size: 13px;
+                flex: 1;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            .settings-icon {
+                color: #8e918f;
+            }
+        }
+    }
+}
+.sidebar-close-btn {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border: none;
+    border-radius: 8px;
+    background: transparent;
+    color: #c4c7c5;
+    cursor: pointer;
+    transition: background 0.2s;
+
+    &:hover {
+        background-color: #2a2b30;
+        color: #fff;
+    }
+}

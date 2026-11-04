@@ -1,0 +1,69 @@
+.tool-workspace {
+    flex: 1;
+    height: 100vh;
+    overflow-y: auto;
+    background: #0e0e11;
+    color: #e3e3e3;
+
+    .tool-workspace-header {
+        height: 56px;
+        padding: 0 25px;
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid #25262c;
+
+        button {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: transparent;
+            border: none;
+            color: #aaa;
+            cursor: pointer;
+
+            &:hover {
+                color: white;
+            }
+        }
+    }
+
+    .tool-workspace-content {
+        padding: 50px;
+
+        .tool-workspace-icon {
+            color: #60a5fa;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 27px;
+            margin-bottom: 12px;
+        }
+
+        > p {
+            color: #92949e;
+            font-size: 14px;
+        }
+
+        .tool-workspace-coming {
+            margin-top: 35px;
+            padding: 25px;
+            background: #191a20;
+            border: 1px solid #2a2b30;
+            border-radius: 12px;
+
+            span {
+                color: #60a5fa;
+                font-size: 11px;
+                font-weight: 600;
+            }
+
+            p {
+                margin-top: 12px;
+                color: #aaa;
+                font-size: 13px;
+                line-height: 1.6;
+            }
+        }
+    }
+}

@@ -1,0 +1,6 @@
+
+# Security logs and collected data
+data/raw/*
+data/processed/*
+data/exports/*
+data/reports/*

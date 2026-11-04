@@ -1,0 +1,12 @@
+import React from 'react';
+import ToolWorkspace from '../shared/ToolWorkspace';
+
+export default function ToolIPManager(props) {
+    return (
+        <ToolWorkspace
+            title="IP Manager"
+            description="Quản lý IP bị chặn, mở khóa IP và lịch sử xử lý."
+            {...props}
+        />
+    );
+}

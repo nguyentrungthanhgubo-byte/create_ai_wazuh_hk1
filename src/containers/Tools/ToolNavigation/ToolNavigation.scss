@@ -1,0 +1,172 @@
+.app-navigation-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 2000;
+    animation: navFadeIn 0.2s ease;
+}
+
+.app-navigation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 340px;
+    max-width: 85vw;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    background: #17181d;
+    border-right: 1px solid #30313a;
+
+    box-shadow: 8px 0 30px rgba(0, 0, 0, 0.35);
+
+    animation: navSlideIn 0.25s ease;
+
+    .app-navigation-header {
+        height: 65px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 18px;
+        border-bottom: 1px solid #30313a;
+
+        .navigation-brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 16px;
+            font-weight: 600;
+
+            svg {
+                color: #4b90ff;
+            }
+        }
+
+        button {
+            border: none;
+            background: transparent;
+            color: #aaa;
+            cursor: pointer;
+            padding: 6px;
+
+            &:hover {
+                color: white;
+            }
+        }
+    }
+
+    .navigation-section-title {
+        padding: 24px 18px 10px;
+        font-size: 11px;
+        color: #777;
+        font-weight: 600;
+        letter-spacing: 1px;
+    }
+
+    .navigation-item {
+        width: 100%;
+        min-height: 55px;
+
+        display: flex;
+        align-items: center;
+        gap: 14px;
+
+        padding: 0 20px;
+
+        background: transparent;
+        border: none;
+        border-bottom: 1px solid #292a31;
+
+        color: #e3e3e3;
+        font-size: 14px;
+        text-align: left;
+        cursor: pointer;
+
+        transition: background 0.2s;
+
+        &:hover {
+            background: #25262d;
+        }
+
+        &.active {
+            background: rgba(59, 130, 246, 0.12);
+            color: #65a5ff;
+        }
+
+        span {
+            flex: 1;
+        }
+
+        .navigation-chevron {
+            transition: transform 0.2s;
+
+            &.expanded {
+                transform: rotate(90deg);
+            }
+        }
+    }
+
+    .navigation-submenu {
+        background: #121318;
+        padding: 8px 0;
+
+        .navigation-subitem {
+            width: 100%;
+            min-height: 45px;
+
+            display: flex;
+            align-items: center;
+            gap: 13px;
+
+            padding: 0 24px 0 48px;
+
+            background: transparent;
+            border: none;
+
+            color: #b9bbc4;
+            font-size: 13px;
+            text-align: left;
+            cursor: pointer;
+
+            &:hover {
+                background: #25262d;
+                color: white;
+            }
+
+            &.active {
+                color: #60a5fa;
+                background: rgba(59, 130, 246, 0.12);
+            }
+        }
+    }
+
+    .navigation-footer {
+        margin-top: auto;
+        padding: 18px;
+        border-top: 1px solid #30313a;
+        color: #777;
+        font-size: 11px;
+    }
+}
+
+@keyframes navFadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes navSlideIn {
+    from {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
